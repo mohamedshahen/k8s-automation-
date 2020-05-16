@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: k8s-automate
+  name: k8s-automate
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: k8s-automate
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: k8s-automate
+    spec:
+      containers:
+      - image: mohamedshahen/k8s-automate
+        name: k8s-automate
+        resources: {}
+status: {}
